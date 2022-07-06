@@ -1,0 +1,6 @@
+framework module Pods_whatsapp_viewcodeTests {
+  umbrella header "Pods-whatsapp-viewcodeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
