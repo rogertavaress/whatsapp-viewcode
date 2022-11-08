@@ -1,15 +1,14 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  whatsapp-viewcode
 //
-//  Created by Rogério Tavares on 07/07/22.
+//  Created by Rogério Tavares on 13/07/22.
 //
 
 import UIKit
-import AuthenticationServices
 
-class LoginViewController: UIViewController {
-
+class RegisterViewController: UIViewController {
+    
     lazy var mainStackView: UIStackView = {
         var stackView = UIStackView()
         stackView.distribution = .equalCentering
@@ -30,7 +29,7 @@ class LoginViewController: UIViewController {
     
     lazy var loginAreaView: UIStackView = {
         let stackView = UIStackView()
-//        stackView.backgroundColor = .black
+        //        stackView.backgroundColor = .black
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.spacing = 20
@@ -46,11 +45,29 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
+    lazy var passwordAreaView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .leading
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
     
-    lazy var passwordTextField: CustomTextField = {
-        let textField = CustomTextField(frame: .zero)
-        textField.setLabel("Senha:")
-        textField.setPlaceholder("******")
+    lazy var passwordLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Senha:"
+        label.font = .boldSystemFont(ofSize: 18)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .white
+        textField.textAlignment = .center
+        textField.placeholder = "******"
+        textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -72,7 +89,7 @@ class LoginViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -96,8 +113,11 @@ class LoginViewController: UIViewController {
         mainStackView.addArrangedSubview(titleLabel)
         mainStackView.addArrangedSubview(loginAreaView)
         
+        passwordAreaView.addArrangedSubview(passwordLabel)
+        passwordAreaView.addArrangedSubview(passwordTextField)
+        
         loginAreaView.addArrangedSubview(emailTextField)
-        loginAreaView.addArrangedSubview(passwordTextField)
+        loginAreaView.addArrangedSubview(passwordAreaView)
         loginAreaView.addArrangedSubview(loginButton)
         loginAreaView.addArrangedSubview(registerButton)
     }

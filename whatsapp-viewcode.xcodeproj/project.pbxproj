@@ -10,6 +10,8 @@
 		42F43969D1319033C1D08E5D /* Pods_whatsapp_viewcode_whatsapp_viewcodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B151E2D97FBE203211B201 /* Pods_whatsapp_viewcode_whatsapp_viewcodeUITests.framework */; };
 		81AE3DD0297700BA396D1B25 /* Pods_whatsapp_viewcodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C3A66E8A9AB69356594469 /* Pods_whatsapp_viewcodeTests.framework */; };
 		90832F44CBC535DE4CB0A12E /* Pods_whatsapp_viewcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A80010B07099A041CF97BB /* Pods_whatsapp_viewcode.framework */; };
+		9E010B5E287EDC0500D3C155 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E010B5D287EDC0500D3C155 /* RegisterViewController.swift */; };
+		9E010B62287EDD1000D3C155 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E010B61287EDD1000D3C155 /* CustomTextField.swift */; };
 		9E319742287834A500243AB9 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E319741287834A500243AB9 /* UIImage+extensions.swift */; };
 		9E3197442878456600243AB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E3197432878456600243AB9 /* GoogleService-Info.plist */; };
 		9E598C7B2876DF1300C890C3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E598C7A2876DF1300C890C3 /* ChatViewController.swift */; };
@@ -56,6 +58,8 @@
 		624043B94B0FD6D838EACF2B /* Pods-whatsapp-viewcode-whatsapp-viewcodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsapp-viewcode-whatsapp-viewcodeUITests.debug.xcconfig"; path = "Target Support Files/Pods-whatsapp-viewcode-whatsapp-viewcodeUITests/Pods-whatsapp-viewcode-whatsapp-viewcodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		67B151E2D97FBE203211B201 /* Pods_whatsapp_viewcode_whatsapp_viewcodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsapp_viewcode_whatsapp_viewcodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A80010B07099A041CF97BB /* Pods_whatsapp_viewcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsapp_viewcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E010B5D287EDC0500D3C155 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9E010B61287EDD1000D3C155 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9E319741287834A500243AB9 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		9E3197432878456600243AB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E598C7A2876DF1300C890C3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E010B5C287EDBE600D3C155 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9E010B5D287EDC0500D3C155 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		9E010B5F287EDCCE00D3C155 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E010B60287EDCDF00D3C155 /* TextField */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E010B60287EDCDF00D3C155 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				9E010B61287EDD1000D3C155 /* CustomTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		9E598C792876DED700C890C3 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +227,7 @@
 		9E62527128759EF10041961C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9E010B5F287EDCCE00D3C155 /* Views */,
 				9E598C7E2876E7FE00C890C3 /* Coordinator */,
 				9E6252812875A4E00041961C /* Extensions */,
 				9E62527C2875A2A40041961C /* Services */,
@@ -209,6 +238,7 @@
 		9E62527228759F000041961C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9E010B5C287EDBE600D3C155 /* Register */,
 				9E598C832876EA1600C890C3 /* Login */,
 				9E598C792876DED700C890C3 /* Chat */,
 				9E62527328759F1B0041961C /* ChatList */,
@@ -522,9 +552,11 @@
 				9E62527B2875A1F00041961C /* ChatListItemTableViewCell.swift in Sources */,
 				9E6252832875A5060041961C /* UIImageView+extensions.swift in Sources */,
 				9E62524028759A400041961C /* SceneDelegate.swift in Sources */,
+				9E010B62287EDD1000D3C155 /* CustomTextField.swift in Sources */,
 				9E6252802875A3090041961C /* ChatListItemModel.swift in Sources */,
 				9E62524828759A400041961C /* whatsapp_viewcode.xcdatamodeld in Sources */,
 				9E598C802876E83F00C890C3 /* Coordinator.swift in Sources */,
+				9E010B5E287EDC0500D3C155 /* RegisterViewController.swift in Sources */,
 				9E62527E2875A2C50041961C /* GetChatDataService.swift in Sources */,
 				9E598C7B2876DF1300C890C3 /* ChatViewController.swift in Sources */,
 				9E62527628759F690041961C /* ChatListViewController.swift in Sources */,
